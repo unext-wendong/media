@@ -56,6 +56,7 @@ import androidx.media3.exoplayer.source.ads.AdsLoader;
 import androidx.media3.exoplayer.util.DebugTextViewHelper;
 import androidx.media3.exoplayer.util.EventLogger;
 import androidx.media3.ui.PlayerView;
+import androidx.media3.ui.SubtitleView;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -282,6 +283,7 @@ public class PlayerActivity extends AppCompatActivity
       player.addAnalyticsListener(new EventLogger());
       player.setAudioAttributes(AudioAttributes.DEFAULT, /* handleAudioFocus= */ true);
       player.setPlayWhenReady(startAutoPlay);
+      playerView.getSubtitleView().setViewType(SubtitleView.VIEW_TYPE_WEB);
       playerView.setPlayer(player);
       configurePlayerWithServerSideAdsLoader();
       debugViewHelper = new DebugTextViewHelper(player, debugTextView);
