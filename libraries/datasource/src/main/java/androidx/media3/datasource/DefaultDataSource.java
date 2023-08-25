@@ -245,6 +245,7 @@ public final class DefaultDataSource implements DataSource {
   public long open(DataSpec dataSpec) throws IOException {
     Assertions.checkState(dataSource == null);
     // Choose the correct source for the scheme.
+    Log.e(TAG, "open wli " + dataSpec.uri.toString());
     String scheme = dataSpec.uri.getScheme();
     if (Util.isLocalFileUri(dataSpec.uri)) {
       String uriPath = dataSpec.uri.getPath();
