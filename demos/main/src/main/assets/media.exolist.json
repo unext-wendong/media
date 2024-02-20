@@ -1,5 +1,20 @@
 [
   {
+    "name": "Debug",
+    "samples": [
+      {
+        "name": "VOD DV",
+        "uri": "https://streamd01cme.nxtv.jp/dash01/0002/816/db105c43-9ab5-4aad-bac4-362bf7101f66/MEZ0000867306_128_144_640_800_2500_5000_10000_16000.mpd",
+        "drm_scheme": "widevine",
+        "drm_license_uri": "https://stallis-almex-staging.nxtsvc.com/licenses/unext-vod-prod-1445178-6RdzIwt7Y"
+      },
+      {
+        "name": "Subtitle Clear",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/paravi_t01_default/tmp.mpd"
+      }
+    ]
+  },
+  {
     "name": "Clear DASH",
     "samples": [
       {

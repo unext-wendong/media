@@ -253,6 +253,7 @@ public final class WebvttCueParser {
     ArrayDeque<StartTag> startTagStack = new ArrayDeque<>();
     int pos = 0;
     List<Element> nestedElements = new ArrayList<>();
+    Log.i(TAG, "wli_sub parseCueText 1: " + markup);
     while (pos < markup.length()) {
       char curr = markup.charAt(pos);
       switch (curr) {
@@ -275,6 +276,7 @@ public final class WebvttCueParser {
             continue;
           }
           if (isClosingTag) {
+            Log.i(TAG, "wli_sub parseCueText 2 closing");
             StartTag startTag;
             do {
               if (startTagStack.isEmpty()) {
@@ -289,6 +291,7 @@ public final class WebvttCueParser {
               }
             } while (!startTag.name.equals(tagName));
           } else if (!isVoidTag) {
+            Log.i(TAG, "wli_sub parseCueText 3 opening: " + fullTagExpression);
             startTagStack.push(StartTag.buildStartTag(fullTagExpression, spannedText.length()));
           }
           break;
@@ -582,6 +585,7 @@ public final class WebvttCueParser {
     int deletedCharCount = 0;
     int lastRubyTextEnd = startTag.position;
     for (int i = 0; i < sortedNestedElements.size(); i++) {
+      Log.i(TAG, "wli_sub applyRubySpans 0: i " + i + " " + sortedNestedElements.get(i).startTag.name);
       if (!TAG_RUBY_TEXT.equals(sortedNestedElements.get(i).startTag.name)) {
         continue;
       }
@@ -599,6 +603,7 @@ public final class WebvttCueParser {
       int adjustedRubyTextEnd = rubyTextElement.endPosition - deletedCharCount;
       CharSequence rubyText = text.subSequence(adjustedRubyTextStart, adjustedRubyTextEnd);
       text.delete(adjustedRubyTextStart, adjustedRubyTextEnd);
+      Log.i(TAG, "wli_sub applyRubySpans 1: i " + i + " " + lastRubyTextEnd + " " + adjustedRubyTextStart);
       text.setSpan(
           new RubySpan(rubyText.toString(), rubyPosition),
           lastRubyTextEnd,
