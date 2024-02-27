@@ -278,6 +278,11 @@ public class PlayerActivity extends AppCompatActivity
       setRenderersFactory(
           playerBuilder, intent.getBooleanExtra(IntentUtil.PREFER_EXTENSION_DECODERS_EXTRA, false));
       player = playerBuilder.build();
+      trackSelectionParameters = trackSelectionParameters.buildUpon()
+          .setPreferredTextRoleFlags(C.ROLE_FLAG_MAIN | C.ROLE_FLAG_SUBTITLE | C.ROLE_FLAG_CAPTION)
+          .setPreferredTextLanguages() // Override the values got from CaptioningManager
+          .setSelectUndeterminedTextLanguage(true)
+          .build();
       player.setTrackSelectionParameters(trackSelectionParameters);
       player.addListener(new PlayerEventListener());
       player.addAnalyticsListener(new EventLogger());

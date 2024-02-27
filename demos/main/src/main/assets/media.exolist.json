@@ -1,5 +1,42 @@
 [
   {
+    "name": "Test",
+    "samples": [
+      {
+        "name": "t10 ja only no role",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t10_ja_only_no_role/manifest.mpd"
+      },
+      {
+        "name": "t00 EP1 ja only",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t00_ja_only/manifest.mpd"
+      },
+      {
+        "name": "t01 EP2 default ja",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t01_ja/manifest.mpd"
+      },
+      {
+        "name": "t02 EP3 default en",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t02_en/manifest.mpd"
+      },
+      {
+        "name": "t04 EP4 no default ja first",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t04_no_ja/manifest.mpd"
+      },
+      {
+        "name": "t03 EP5 no default en first",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t03_no_en/manifest.mpd"
+      },
+      {
+        "name": "t05 default ja with forced",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t05_ja_forced/manifest.mpd"
+      },
+      {
+        "name": "t06 default en with forced",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t06_en_forced/manifest.mpd"
+      }
+    ]
+  },
+  {
     "name": "Clear DASH",
     "samples": [
       {
