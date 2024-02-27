@@ -1,5 +1,87 @@
 [
   {
+    "name": "Test live",
+    "samples": [
+      {
+        "name": "tcloud SP live00159",
+        "uri": "https://1322658612.ap-tokyo.streampackage.srclivepull.myqcloud.com/v1/01929ecc44c61eb4611d03876a60/01929ecc89731ebd416a038d08bc/main.m3u8"
+      },
+      {
+        "name": "dash-cmaf 46",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/cmaf/g2_local_46/manifest.mpd",
+        "drm_scheme": "widevine",
+        "drm_license_uri": "https://wabit-lime.awsdev.unext.dev/proxy?authorization=Bearer%20eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoid2FiaXQtdGVzdC0wMSJ9.TxD7ihyZNfpV__j3r7BzpXqh8Jd0IZATyqLJrk2th0f9sick-yrWpXFi9u5JxQ72OEWZZPhjB24JRv1e5WMowMzfVc1it2a72JFvC3P9GnIqYXfu-JhVsxKWN_sos3BGf2OSoMzlaNnFELLf11tNnejyYZ48kpzDQ2HNiTaAxWUZePblZv5VX37-DqKer5jDYC4b3aBknLleLlH7IG-M4Uku4Orz4gVQPiGH88CLVfAAoc4o4r_VPKSJ57xirMvKQBooGzM7I3I_MYdYfjd-3RnLQc09Xr7YDkfI9qetj5tW0B2ncmotu5sx4Xn5npkY-5OptiX1SKBeNSb3THGxpw.yYjD5TFL717AMD3j.evVuloANPXEKTSGw73cZIycoX-BfjUsbJkxSto2E3cThMtUxDu_UTXHAOqFGywu4-ZHgbwY9Lz-bw9l1pLDBlEbyXOfrdc44AM5Ef4DVnl9BqQOlOHYOUvNB4C82L-FuUzCNiyg5x2mRKhlgdQzCBul-SJQ5f3pYhMroXxPBXqk37Ur_d2BmtEtVU6pQd7gwaMPhOJmfxduW0MykAbcC-DI8kdTl48DanxA3F5N1PjccSrkYFiPhvGmhXCotK7INFi62UaNWaFlm69TpNJaz6oLgk6pGZ6OvNbJrGWfWeZb3BQOloKGcI4wP1Gj8wOPJA0HouVbAlicRgi8vuM5B1lJH7eoLsGOXc3uy5ZiQELkaYGtjJCaTULiHHgJO9QqXIdxOZoMTpl3USUIjLDPQfi_RzNUV2QCcD3uGu_Qs_-XyMVrqkQXD68USzT-55Q5b6MM6O49GQz-hH3Et3iHKjytNEDmD5upH05RVLklEZLzsnA.WYz3dvKsHHJG-f_254-sbw"
+      },
+      {
+        "name": "hls-cmaf widevine with key",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/cmaf/g2_local_46/master_fp_raw.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_uri": "https://wabit-lime.awsdev.unext.dev/proxy?authorization=Bearer%20eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoid2FiaXQtdGVzdC0wMSJ9.TxD7ihyZNfpV__j3r7BzpXqh8Jd0IZATyqLJrk2th0f9sick-yrWpXFi9u5JxQ72OEWZZPhjB24JRv1e5WMowMzfVc1it2a72JFvC3P9GnIqYXfu-JhVsxKWN_sos3BGf2OSoMzlaNnFELLf11tNnejyYZ48kpzDQ2HNiTaAxWUZePblZv5VX37-DqKer5jDYC4b3aBknLleLlH7IG-M4Uku4Orz4gVQPiGH88CLVfAAoc4o4r_VPKSJ57xirMvKQBooGzM7I3I_MYdYfjd-3RnLQc09Xr7YDkfI9qetj5tW0B2ncmotu5sx4Xn5npkY-5OptiX1SKBeNSb3THGxpw.yYjD5TFL717AMD3j.evVuloANPXEKTSGw73cZIycoX-BfjUsbJkxSto2E3cThMtUxDu_UTXHAOqFGywu4-ZHgbwY9Lz-bw9l1pLDBlEbyXOfrdc44AM5Ef4DVnl9BqQOlOHYOUvNB4C82L-FuUzCNiyg5x2mRKhlgdQzCBul-SJQ5f3pYhMroXxPBXqk37Ur_d2BmtEtVU6pQd7gwaMPhOJmfxduW0MykAbcC-DI8kdTl48DanxA3F5N1PjccSrkYFiPhvGmhXCotK7INFi62UaNWaFlm69TpNJaz6oLgk6pGZ6OvNbJrGWfWeZb3BQOloKGcI4wP1Gj8wOPJA0HouVbAlicRgi8vuM5B1lJH7eoLsGOXc3uy5ZiQELkaYGtjJCaTULiHHgJO9QqXIdxOZoMTpl3USUIjLDPQfi_RzNUV2QCcD3uGu_Qs_-XyMVrqkQXD68USzT-55Q5b6MM6O49GQz-hH3Et3iHKjytNEDmD5upH05RVLklEZLzsnA.WYz3dvKsHHJG-f_254-sbw"
+      },
+      {
+        "name": "hls-cmaf widevine nokey",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/cmaf/g2_local_46/master_fp_nokey_raw.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_uri": "https://wabit-lime.awsdev.unext.dev/proxy?authorization=Bearer%20eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoid2FiaXQtdGVzdC0wMSJ9.TxD7ihyZNfpV__j3r7BzpXqh8Jd0IZATyqLJrk2th0f9sick-yrWpXFi9u5JxQ72OEWZZPhjB24JRv1e5WMowMzfVc1it2a72JFvC3P9GnIqYXfu-JhVsxKWN_sos3BGf2OSoMzlaNnFELLf11tNnejyYZ48kpzDQ2HNiTaAxWUZePblZv5VX37-DqKer5jDYC4b3aBknLleLlH7IG-M4Uku4Orz4gVQPiGH88CLVfAAoc4o4r_VPKSJ57xirMvKQBooGzM7I3I_MYdYfjd-3RnLQc09Xr7YDkfI9qetj5tW0B2ncmotu5sx4Xn5npkY-5OptiX1SKBeNSb3THGxpw.yYjD5TFL717AMD3j.evVuloANPXEKTSGw73cZIycoX-BfjUsbJkxSto2E3cThMtUxDu_UTXHAOqFGywu4-ZHgbwY9Lz-bw9l1pLDBlEbyXOfrdc44AM5Ef4DVnl9BqQOlOHYOUvNB4C82L-FuUzCNiyg5x2mRKhlgdQzCBul-SJQ5f3pYhMroXxPBXqk37Ur_d2BmtEtVU6pQd7gwaMPhOJmfxduW0MykAbcC-DI8kdTl48DanxA3F5N1PjccSrkYFiPhvGmhXCotK7INFi62UaNWaFlm69TpNJaz6oLgk6pGZ6OvNbJrGWfWeZb3BQOloKGcI4wP1Gj8wOPJA0HouVbAlicRgi8vuM5B1lJH7eoLsGOXc3uy5ZiQELkaYGtjJCaTULiHHgJO9QqXIdxOZoMTpl3USUIjLDPQfi_RzNUV2QCcD3uGu_Qs_-XyMVrqkQXD68USzT-55Q5b6MM6O49GQz-hH3Et3iHKjytNEDmD5upH05RVLklEZLzsnA.WYz3dvKsHHJG-f_254-sbw"
+      },
+      {
+        "name": "IT live00159",
+        "uri": "https://live00159.awsdev.unext.dev/out/v1/25e85fce01de4d4a879d39fe68adcc37/manifest.mpd",
+        "drm_scheme": "widevine",
+        "drm_license_uri": "https://stallis-almex-staging.nxtsvc.com/licenses/unext-it-common"
+      },
+      {
+        "name": "IT live00159 local wvproxy",
+        "uri": "https://live00159.awsdev.unext.dev/out/v1/25e85fce01de4d4a879d39fe68adcc37/manifest.mpd",
+        "drm_scheme": "widevine",
+        "drm_license_uri": "https://bluebird-sought-naturally.ngrok-free.app/proxy?authorization=Bearer%20eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoibG9jYWx0ZXN0In0.suXeBnngw7tjsXrFjyTQYuCQOISZZNEk5P0GTqRxagwj9UOLKHBPRDEo_DFQoWm1j4ANSFROjAWFOOxWV4ODWD014FKppNWJFHRa8g3TXiY-LomeAzyAwAXGghCqTeE6R4kDQxfnTi9xmONyuUSirRB1XIZolzlUC3x9i6xNlLRi2bc5Eo4yVgj4qSF6B0tuXzrbT_fAu26YPaaE_6Td1HFg44MYeVSwINC-RkxMQbEGZ3KkrPdjWayguepoXTTijqpNNqijRnB3V4u1ED8u6nUZZmHKLThudq-gZ_9nNeVdd33CUo2sLZ3314F4Ry6AGkO-AflesK-AGX9wwr7dvw.UG8T5Vdyuof-nnEA.39oBAlhRmPWcudSv70dxtPFnANK1uPXVvS4wDgEhcKWRM-Ab-SUlh-fAjwYLLbxAFreVXyqlacoPc9EfNyE-5FnVsAc2HoA6Qa1UudTOwVZbL5wdG0VwBROmBTb1_VEXM9AXhs4mM9LKfrTqQ8V3mNXTY4SY_F_xbAklg04qW5yFr_dawG_xOTAZSSJ5qzR3DNJ-3YZK9dy9X31WdUpocXvoNTn2KfIeL6xPw8cIqvspBXmFnavx0AEGQtZP3Fy3NqBoSOlGtG12I5m3N7I24ry2KTX963jBTqYTd-34Kne6cYxlFbCs1GRn8HLYFh5aWH98vsQv0QhEUt4rrkUQJmb2HEqGdwF56zUHkvPfiupxAlAUaJFIJtqiDerhE-xu6j-7Gm6UwCLQRDiaTYlHVjJ_qHvObnstRZuQraBCrp-wwfy8QEZSj-aPns8.152-7V5vVPUk5FfNcY1pSg"
+      },
+      {
+        "name": "IT live00159 hls widevine",
+        "uri": "https://live00159.awsdev.unext.dev/out/v1/78a654dd49d047fabba7d2acd1301dba/live00159/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_uri": "https://stallis-almex-staging.nxtsvc.com/licenses/unext-it-common"
+      }
+    ]
+  },
+  {
+    "name": "Test",
+    "samples": [
+      {
+        "name": "t10 ja only no role",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t10_ja_only_no_role/manifest.mpd"
+      },
+      {
+        "name": "t00 EP1 ja only",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t00_ja_only/manifest.mpd"
+      },
+      {
+        "name": "t01 EP2 default ja",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t01_ja/manifest.mpd"
+      },
+      {
+        "name": "t02 EP3 default en",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t02_en/manifest.mpd"
+      },
+      {
+        "name": "t04 EP4 no default ja first",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t04_no_ja/manifest.mpd"
+      },
+      {
+        "name": "t03 EP5 no default en first",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t03_no_en/manifest.mpd"
+      },
+      {
+        "name": "t05 default ja with forced",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t05_ja_forced/manifest.mpd"
+      },
+      {
+        "name": "t06 default en with forced",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t06_en_forced/manifest.mpd"
+      }
+    ]
+  },
+  {
     "name": "Clear DASH",
     "samples": [
       {
