@@ -2852,13 +2852,22 @@ public class DefaultTrackSelector extends MappingTrackSelector
     for (int rendererIndex = 0; rendererIndex < rendererCount; rendererIndex++) {
       if (trackType == mappedTrackInfo.getRendererType(rendererIndex)) {
         TrackGroupArray groups = mappedTrackInfo.getTrackGroups(rendererIndex);
+        if (trackType == C.TRACK_TYPE_TEXT) {
+          Log.w(TAG, "wli selectTracksForType 1 groups size " + groups.length);
+        }
         for (int groupIndex = 0; groupIndex < groups.length; groupIndex++) {
           TrackGroup trackGroup = groups.get(groupIndex);
           @Capabilities int[] groupSupport = formatSupport[rendererIndex][groupIndex];
           List<T> trackInfos = trackInfoFactory.create(rendererIndex, trackGroup, groupSupport);
           boolean[] usedTrackInSelection = new boolean[trackGroup.length];
+          if (trackType == C.TRACK_TYPE_TEXT) {
+            Log.w(TAG, "wli selectTracksForType 2 group " + groupIndex + " size " + trackGroup.length);
+          }
           for (int trackIndex = 0; trackIndex < trackGroup.length; trackIndex++) {
             T trackInfo = trackInfos.get(trackIndex);
+            if (trackType == C.TRACK_TYPE_TEXT) {
+              Log.w(TAG, "wli selectTracksForType 3 group " + groupIndex + " track " + trackIndex + " eligibility " + trackInfo.getSelectionEligibility());
+            }
             @SelectionEligibility int eligibility = trackInfo.getSelectionEligibility();
             if (usedTrackInSelection[trackIndex] || eligibility == SELECTION_ELIGIBILITY_NO) {
               continue;
@@ -2884,9 +2893,13 @@ public class DefaultTrackSelector extends MappingTrackSelector
         }
       }
     }
+    if (trackType == C.TRACK_TYPE_TEXT) {
+      Log.w(TAG, "wli selectTracksForType 4 possibleSelections size " + possibleSelections.size());
+    }
     if (possibleSelections.isEmpty()) {
       return null;
     }
+
     List<T> bestSelection = max(possibleSelections, selectionComparator);
     int[] trackIndices = new int[bestSelection.size()];
     for (int i = 0; i < bestSelection.size(); i++) {
@@ -3898,6 +3911,7 @@ public class DefaultTrackSelector extends MappingTrackSelector
       preferredLanguageScore = bestLanguageScore;
       preferredRoleFlagsScore =
           getRoleFlagMatchScore(format.roleFlags, parameters.preferredTextRoleFlags);
+      Log.w(TAG, "wli TextTrackInfo language " + format.language + " format.roleFlags " + format.roleFlags + " parameters.preferredTextRoleFlags " + parameters.preferredTextRoleFlags + " preferredRoleFlagsScore " + preferredRoleFlagsScore);
       hasCaptionRoleFlags =
           (format.roleFlags & (C.ROLE_FLAG_CAPTION | C.ROLE_FLAG_DESCRIBES_MUSIC_AND_SOUND)) != 0;
       boolean selectedAudioLanguageUndetermined =
@@ -3952,7 +3966,26 @@ public class DefaultTrackSelector extends MappingTrackSelector
       if (preferredRoleFlagsScore == 0) {
         chain = chain.compareTrueFirst(this.hasCaptionRoleFlags, other.hasCaptionRoleFlags);
       }
-      return chain.result();
+      int ret = chain.result();
+      Log.w(TAG, "wli compareTo this.language " + this.format.language + " roleFlags " + this.format.roleFlags);
+      Log.w(TAG, "wli compareTo this.isWithinRendererCapabilities " + this.isWithinRendererCapabilities);
+      Log.w(TAG, "wli compareTo this.preferredLanguageIndex " + this.preferredLanguageIndex);
+      Log.w(TAG, "wli compareTo this.preferredLanguageScore " + this.preferredLanguageScore);
+      Log.w(TAG, "wli compareTo this.preferredRoleFlagsScore " + this.preferredRoleFlagsScore);
+      Log.w(TAG, "wli compareTo this.selectedAudioLanguageScore " + this.selectedAudioLanguageScore);
+      Log.w(TAG, "wli compareTo this.isDefault " + this.isDefault);
+      Log.w(TAG, "wli compareTo this.isForced " + this.isForced);
+
+      Log.w(TAG, "wli compareTo other.language " + other.format.language + " roleFlags " + other.format.roleFlags);
+      Log.w(TAG, "wli compareTo other.isWithinRendererCapabilities " + other.isWithinRendererCapabilities);
+      Log.w(TAG, "wli compareTo other.preferredLanguageIndex " + other.preferredLanguageIndex);
+      Log.w(TAG, "wli compareTo other.preferredLanguageScore " + other.preferredLanguageScore);
+      Log.w(TAG, "wli compareTo other.preferredRoleFlagsScore " + other.preferredRoleFlagsScore);
+      Log.w(TAG, "wli compareTo other.selectedAudioLanguageScore " + other.selectedAudioLanguageScore);
+      Log.w(TAG, "wli compareTo other.isDefault " + other.isDefault);
+      Log.w(TAG, "wli compareTo other.isForced " + other.isForced);
+      Log.w(TAG, "wli compareTo ret " + ret);
+      return ret;
     }
 
     public static int compareSelections(List<TextTrackInfo> infos1, List<TextTrackInfo> infos2) {

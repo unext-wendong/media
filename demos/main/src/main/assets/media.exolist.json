@@ -33,6 +33,10 @@
       {
         "name": "t06 default en with forced",
         "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t06_en_forced/manifest.mpd"
+      },
+      {
+        "name": "t11 default ja with sdh",
+        "uri": "https://d1sejb9rba1296.cloudfront.net/tmp/text/langsele_t11_ja_sdh/manifest.mpd"
       }
     ]
   },
